@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Mini Calcutaor</title>
+</head>
+<style>
+    div{
+      text-align: center;
+      margin-top: 15%;
+      /* border: 1px red solid; */
+      height: 150px;
+      width: 250px;
+      color: lightblue;
+      margin: auto;
+      margin-top: 15%;
+      padding-top: 10px;
+      padding-right: 7px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+      
+      
+    }
+    #Number1,#Number2{
+        color: red;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 25px;
+        text-align: center;
+    }
+    button{
+        color: cornflowerblue;
+        margin-left: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 5px;
+    }
+</style>
+<body>
+    <div>
+    <input type="text" placeholder="Enter a number" id="Number1">
+    <input type="text" placeholder="Enter a Number" id="Number2"><br><br>
+    <button onclick="b1()">Add</button>
+    <button onclick="b2()">sub</button> 
+    <button onclick="b3()">Multiple</button>
+    <button onclick="b4()"> Divide</button>
+</div>
+</body>
+<script>
+    let input1 = document.getElementById("Number1")
+    let input2 = document.getElementById("Number2")
+    function b1() {
+        let num1 = input1.value
+        let num2 = input2.value
+        let result = +num1 + +num2
+        alert(result)
+    }
+    function b2(){
+        let num1 =input1.value
+        let num2 = input2.value
+        let result = +num1 - +num2
+        alert(result)
+    }
+    function b3(){
+        let num1 = input1.value
+        let num2 = input2.value
+        let result = +num1 * +num2
+        alert(result)
+    }
+    function b4(){
+        let num1 = input1.value
+        let num2 = input2.value
+        let result = +num1 / +num2
+        alert(result)
+    }
+
+</script>
+</html>
