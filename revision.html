@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myinput" placeholder="">
+    <button onclick="mybutton()">Submit</button> 
+    <h1 id="heading">Entered Value : </h1>
+    
+</body>
+<script>
+    function mybutton(){
+        let input1 = document.getElementById("myinput")
+        let H1 = document.getElementById("heading")
+        H1.innerText = "Entered Value : " + input1.value
+        let result = H1.innerText;
+        alert(result)
+    }
+</script>
+</html>
