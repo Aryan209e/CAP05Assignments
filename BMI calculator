@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI-Calcutor</title>
+</head>
+<style>
+    div{
+        color: teal;
+        width: 40%;
+        
+        /* border: 1px black solid; */
+        background-color: tan;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        margin-left: 30%;
+    }
+    #heading {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: brown;
+    }
+    #display{
+        font-size: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: oblique;
+
+
+    }
+    h4{
+        color: b;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+     #weight{
+        margin-top: 2.5px;
+        border-radius: 5%;
+    }
+    #height{
+        border-radius: 5%;
+        margin-bottom: 15px;
+    }
+    h5{
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    button{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        background-color: lightgreen;
+        border-radius: 5%;
+    }
+</style>
+<body>
+    <div id="cont">
+    <h1 id="heading">Check Your BMI</h1>
+    <h4>Enter your weight and height below to check your BMI results</h4>
+    <h5>Put Your Weight in Here (KG)</h5>
+    <input type="text" id="weight"> <br>
+    <h5>And Your Height in here (CM)</h5>
+    <input type="text" id="height"><br>
+
+    <button onclick="Result()">Calcute</button>
+    
+    <h1 id="Display"></h1>
+</div>
+</body>
+</html>
+<script>
+    
+    function Result(){
+        let WeightNumber = document.getElementById("weight")
+        let HeightNumber = document.getElementById("height")
+    
+        let num1 = WeightNumber.value
+        let num2 = HeightNumber.value
+        // num1.innerText = WeightNumber.value
+        // num2.innerText = HeightNumber.value
+        let result = (num1) / (num2 * num2);
+       console.log(result)
+        let DisplayShow = document.getElementById("Display")
+        DisplayShow.innerText = "Your BMI is "+result + " which means ";
+
+        let bag ="";
+        if(result <= 18.4){
+            DisplayShow.innerText ="Your BMI is "+ result + " which means You are Underweight"
+        }
+        else if(result >=18.5 && result <= 24.9){
+            DisplayShow.innerText = "Your BMI is "+ result + " which means You are Normal Weight"
+        }
+        else if(result >= 25 && result <=29.9){
+            DisplayShow.innerText = "Your BMI is "+ result + " which means You are Over Weight"
+        }
+        else{
+            DisplayShow.innerText = "Your BMI is "+ result + " which means You are Obese"
+        }
+
+        
+
+        
+
+
+    }
+    let main = document.getElementById("cont")
+        main.style.textAlign = "center"
+        main.style.marginTop = "200px" 
+    
+    
+
+</script>
