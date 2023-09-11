@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="display"></h1>
+    <script>
+        function Author(name,birthyear,nationality){
+         this.name = name;
+         this.birthyear = birthyear;
+         this.nationality = nationality;
+        }
+        Author.prototype.name = Book.Author
+        function Book(title,author,genre,price){
+
+          this.title = title;
+          this.author = author
+          this.genre = genre;
+          this.price = price
+        }
+      let Author1 = new Author("Ramu",2002,"Indian")
+    
+        // console.log(Book1,Author1) 
+
+
+        function getBookInfo(title,AuthorName,genre,price){
+         this.title = title;
+         this.AuthorName = AuthorName;
+         this.genre = genre;
+         this.price = price
+        }
+        
+
+        let Book2 = new getBookInfo("RAMSETU","TulsiDas","Hindi",1750)
+        let Book3 = new getBookInfo("XYZ","ABC","Hindi",1950)
+        let Book4 = new getBookInfo("DEF","GHI","Hindi",250)
+        let Book5 = new getBookInfo("LMN","OPQ","Hindi",2250)
+        let Book6 = new getBookInfo("RST","UVW","Hindi",150)
+
+        let arr = [Book2,Book3,Book4,Book5,Book6]
+        let ALLBooksInfo = getBookInfo(arr)
+        
+        let Display = document.getElementById("display")
+
+        Display.innerText = ALLBooksInfo
+    </script>
+</body>
+</html>
