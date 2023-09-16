@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Cars">Cars_Model</h1>
+
+    <button onclick="Car1()">CAR1</button>
+    <button onclick="Car2()">CAR2</button>
+    <button onclick="Car3()">CAR3</button>
+
+    
+    <script>
+
+
+
+        let Cars =  document.getElementById('Cars') 
+        Cars.innerText = Car1.innerText
+       
+        
+    function fourWheeler(model,gear,type,fuelType){
+      this.model = model;
+      this.gear = gear;
+      this.type = type;
+      this.fuelType = fuelType;
+    }
+
+    let car1 = Object.create(fourWheeler)
+      console.log(car1)
+
+      car1 = new fourWheeler('Harrier','6 Gear', 'SUV','Petrol')
+      car2 = new fourWheeler('Safari','6 Gear','SUV','Petrol')
+      car3 = new fourWheeler('Nexon','5 gear','compact SUV','CNG')
+      // console.log(car1,car2,car3)
+
+      function Car1(){
+          console.log(car1)
+        }
+        function Car2(){
+          console.log(car2)
+
+        }
+
+        function Car3(){
+          console.log(car3)
+        }
+
+
+    </script>
+
+    
+
+</body>
+</html>
