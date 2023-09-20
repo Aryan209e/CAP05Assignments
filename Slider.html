@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       
+    </style>
+</head>
+<body>
+   <div id="display">
+    
+   </div>
+   <img src="" alt="">
+
+  
+   <button id="pre">Pre</button>
+   <button  id="next">Next</button>
+</div><body>
+
+<script>
+    let imageArr = [
+       "https://picsum.photos/200/300",
+       "https://picsum.photos/201/300",  
+       "https://picsum.photos/202/300", 
+       "https://picsum.photos/203/300",
+    //    "https://picsum.photos/204/300",
+    //    "https://picsum.photos/205/300",
+    //    "https://picsum.photos/206/300",
+    //    "https://picsum.photos/207/300",
+    //      "https://picsum.photos/208/300",
+    //       "https://picsum.photos/209/300",
+    //       "https://picsum.photos/210/300",
+    //       "https://picsum.photos/211/300",
+    //      "https://picsum.photos/212/300",
+    //       "https://picsum.photos/213/300",
+    //       "https://picsum.photos/214/300",
+    //      "https://picsum.photos/215/300",
+    //       "https://picsum.photos/216/300",
+    //       "https://picsum.photos/217/300",
+    //       "https://picsum.photos/218/300",
+    //      "https://picsum.photos/2019/300",
+    //      "https://picsum.photos/220/300",
+    //      "https://picsum.photos/221/300",
+    ]
+
+    let image = document.querySelector('img')
+    let display = document.getElementById('display')
+    let Pre = document.getElementById('pre')
+    let Next = document.getElementById('next')
+   
+    let currentImg = 0;
+
+    image.setAttribute('src',imageArr[currentImg])
+
+    Pre.addEventListener('click',function(){
+        currentImg--;
+        clearInterval(interval)
+        if(currentImg < 0){
+            currentImg = imageArr.length-1
+        }
+    
+    image.setAttribute('src',imageArr[currentImg])
+    })
+
+
+    Next.addEventListener('click',function(){
+        clearInterval(interval)
+       currentImg++;
+        if(currentImg == imageArr.length-1){
+            currentImg=0
+        }
+        
+    image.setAttribute('src',imageArr[currentImg])
+    })
+    
+ let interval = setInterval( function(){
+    if(currentImg == imageArr.length-1){
+            currentImg=0
+        }
+    image.setAttribute('src',imageArr[currentImg]);
+    currentImg++
+ },1000)
+    
+
+   
+
+</script>
+</html>
