@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1 > Welcome to Siyag Bank</h1>
+    <h2 id="display1"></h2>
+    <h2 id="AccNo"></h2>
+    <script>
+        let Display = document.getElementById("display1")
+        
+        let TotalAcc = document.getElementById("AccNo")
+        // let InactiveAcc  = document.getElementById("display2") 
+
+        // let input = document.getElementById("input")
+         
+       
+
+
+
+
+
+        function BankAccount(accountNo ,name,type,balance){
+        this.accountNo = accountNo;
+        this.name = name;
+        this.type = type;
+        this.balance = balance;
+        this.active = true;
+        }
+
+        BankAccount.prototype.deposit = function(amount){
+            if(amount>0){
+                this.balance += amount
+                console.log(`depodited ${amount}. New Balance ${this.balance}`)
+            }
+            else 
+            {
+                console.log(`Invaild amount  OR  Try again ` )
+            }
+           
+        }
+        BankAccount.prototype.withdrawl =   function(amount){
+            if(amount>0 && this.active == true && this.balance >=amount){
+                this.balance -= amount
+                console.log(`Withdrawl Success`)
+            }
+            else {
+                console.log(`Insuffuicent Balance && Please Check your balance`)
+            }
+        }
+
+        let Account1 = new BankAccount(1,"Ram","Savings",1110)
+        let Account2 = new BankAccount(2,"Shyam","Current",1500)
+        let Account3 = new BankAccount(3,"Dudi","Savings",14000)
+        let Account4 = new BankAccount(4,"Bablu","Savings",1990)
+
+        function totalAmount(accounts){
+            let total = 0;
+            for(let acc of accounts){
+                if(acc.active){
+                    total+= acc.balance;
+                }
+                
+            }
+            return total;
+        }
+        function InAcitveAcc(accounts){
+            let count =0;
+            if(this.active == false){
+                count+=count
+            }
+            else{
+             console.log(`All Accounts are Active `)
+            }
+        }
+        Account1.deposit(8000)
+        Account2.deposit(10000)
+        Account3.deposit(2000)
+        Account4.withdrawl(500)
+       
+        // Account1.active = false
+    let arr = [Account1,Account2,Account3,Account4]
+    let TotalBalance = (totalAmount(arr))
+    Display.innerText = `Total Amount In Bank = ${totalAmount(arr)}`
+    TotalAcc.innerText = `Total Accounts in Bank = ${arr.length}`
+    // InactiveAcc.innerText = ` ${InAcitveAcc(arr)} Total InAcitve Accounts in Bank`
+
+    // input.value = Account1.balance.innerText
+    </script>
+</body>
+</html>

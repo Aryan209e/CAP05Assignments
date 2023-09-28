@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 5%;
+      margin-left: 5%;
+      margin-right: 5%;
+      grid-gap: 20px;
+
+    }
+
+    #container > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #cecece;
+    }
+
+    img {
+      width: 90%;
+      height: 225px;
+    }
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+
+    }
+    h1{
+        color: brown;
+    }
+    </style>
+</head>
+<body>
+
+     <h1>Users Data</h1>
+    <div id="container"></div>
+    <button id="user">User Data</button>
+    <div id="display"></div>
+    
+  
+
+    
+</body>
+</html>
+<script >
+    let container = document.getElementById('container')
+    let user = document.getElementById('user')
+let data = [];
+user.addEventListener('click',function(){
+    fetch('https://reqres.in/api/users')
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(res){
+        console.log(res.data)
+     display(res.data) 
+    })
+})
+
+let displayData = document.getElementById('display')
+
+function display(data){
+data.forEach(function (data){
+    let div = document.createElement('div')
+
+    let Id =  document.createElement('h1');
+      Id = data.id
+    let email = document.createElement('h4');
+  email = data.email
+    let first_Name = document.createElement("h2")
+    first_Name = data.first_name
+    let last_Name = document.createElement("h5")
+    last_Name = data.last_name
+    let Avatar = document.createElement('img')
+    Avatar.src = data.avatar
+
+    div.append(Id,first_Name,last_Name,Avatar,email,)
+
+    container.append(div)
+})
+}
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,th{
+            border: 1px solid black;
+        }
+        body{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            
+        }
+        input{
+            color: brown;
+            font-size: 19px;
+        }
+        button{
+            background-color: teal;
+            font-size: 20px;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div id="display1"></div>
+    <div id="display2"></div>
+    <input type="text" placeholder="Name" id="name">
+    <input type="age" placeholder="age" id="age">
+    <button onclick="btn()">Submit</button>
+
+
+    <button onclick="data()">Stored Data</button>
+  
+    <table>
+        <tr>
+            <td> Name </td>
+            <td> age  </td>
+        </tr>
+        <tr>
+            <td id="Name">  </td>
+            <td id="Age"> </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
+<script src="/index.js"></script>
