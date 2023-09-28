@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #display,#drinksOrder,#move{
+        margin-left: -460px;
+        color: tomato;
+        
+    }
+    button{
+        border-radius: 15%;
+        background-color: teal;
+        color: white;
+    }
+    h1,h2{
+        color: lightcyan;
+    }
+</style>
+<body style="background: url(https://media.istockphoto.com/id/1316145932/photo/table-top-view-of-spicy-food.jpg?s=2048x2048&w=is&k=20&c=azft1MVw7FNLT3CjwcHTaPuYbJLlazIMZbJRxLYVsbA=);">
+    <h1>Welcome to Our Site</h1>
+    <h2>Order Your Food Here </h2>
+  
+    <div id="move" >Your Orders </div>
+    <div id="display"></div>
+    <div id="drinksOrder" ></div>
+    
+ <h4>Fast Food</h4>
+    <select name="Food items" id="food">
+        <option value="Pizza" id="Pizza">Pizza</option>
+        <option value="Burger" id="burger">Burger</option>
+        <option value="French Fires" id="french">French Fires</option>
+        <option value="Momos" id="momos">Momos</option>
+        <option value="Samosa" id="samosa">Samosa</option>
+        <option value="Sandwich" id="sandwich">Sandwich</option>
+        <option value="Aloo tiki" id="aloo">Aloo Tiki</option>
+        <option value="Pasta" id="pasta">Pasta</option>
+    </select>
+    <div id="display1"></div>
+
+   
+ 
+
+
+ <h4>Drinks</h4>
+    <select name="Drinks" id="Drinks">
+        <option value="Coca-Cola" id="coca">Coca-Cola</option>
+        <option value="Dew" id="dew" >Dew</option>
+        <option value="Banana Shek" id="banana">Banana-Shek</option>
+        <option value="Cold-Coffee" id="cold">Cold-Coffee</option>
+        <option value="Hot-Coffee" id="hot">Hot-Coffee</option>
+        <option value="Strawberry-Shek" id="strawberry">Strawberry-Shek</option>
+
+    </select>
+   
+    <div id="display2"></div>
+
+
+    
+
+   <!-- <img src="https://media.istockphoto.com/id/938742222/photo/cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=D1z4xPCs-qQIZyUqRcHrnsJSJy_YbUD9udOrXpilNpI=" alt="" width="200px">
+     -->
+     <br>
+     <br>
+      <h5 style="color: red;"> Note : PLease Check our Terms And Condition it is required </h5>
+      <input type="checkbox" required id="btn2"> <button id="order">Order</button>
+</body>
+</html>
+<script>
+    let display1 = document.getElementById('display1')
+    let display2 = document.getElementById('display2')
+    // fast food \\ Junk food
+    let Pizza = document.getElementById('pizza')
+    let Burger = document.getElementById('burger')
+    let French = document.getElementById('french')
+    let Momos = document.getElementById('momos')
+    let Samosa = document.getElementById('samosa')
+    let Pasta = document.getElementById('pasta')
+    let Sandwich = document.getElementById('sandwich')
+    let Aloo =  document.getElementById('aloo')
+ 
+    //Drinks
+    let Coca = document.getElementById('coca')
+    let Dew = document.getElementById('dew')
+    let Banana = document.getElementById('banana')
+    let Hot = document.getElementById('hot')
+    let Cold = document.getElementById('cold')
+    let Strawberry = document.getElementById('strawberry')
+    let drinksOrder = document.getElementById('drinksOrder')
+
+    
+    
+    food.onchange = function(){
+        display1.innerText = this.value
+    }
+    
+    Drinks.onchange = function(){
+      display2.innerText = this.value
+    }
+
+    let btn = document.getElementById('order')
+    let btn2 = document.getElementById('btn2')
+    let Display = document.getElementById('display')
+     let isTerms = true;
+    let details = document.getElementById('details')
+     
+
+    btn.addEventListener('click',function(){
+        display1.innerText = ""
+        display2.innerText = ""
+        Display.innerText = food.value
+        drinksOrder.innerText =  Drinks.value
+
+
+        let myPromise = new Promise(function(resolve,reject){
+            if(isTerms == true){
+                console.log('Your Order is Placed Succesfully')
+                resolve()
+            }
+            else{
+                console.log('Your Order  is Declind')
+            }
+
+        })
+    })
+    
+    
+
+   
+
+</script>

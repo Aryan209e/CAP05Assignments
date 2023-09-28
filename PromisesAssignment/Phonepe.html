@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+</style>
+<body>
+    <h1>PhonePe</h1>
+
+  <input type = number placeholder="Enter Amount" id="input">
+
+  <button onclick="btn()">Payment</button>
+
+    
+</body>
+</html>
+<script>
+let display = document.getElementById('display')
+    let isPaymentSuccesfully = false;
+    let input = document.getElementById('input')
+     
+    
+    //  if(input.value <=100 ){
+    //    isPaymentSuccesfully = true;
+    //  }
+    // else {
+    //   isPaymentSuccesfully = false; 
+    // }
+    // if(isPaymentSuccesfully == true){
+    //      display.innerText = "Congress Payment Sent Successfully"
+    //    }
+    //     else {
+    //       display.innerText = 'Payment declined'
+    //     }
+    
+    function btn(argue){
+    let myPromise = new Promise (function(resolve,reject){
+        setTimeout(function(){
+          if(isPaymentSuccesfully==true){
+            console.log('Payment Successfully Sent')
+            resolve()
+          }
+            else{
+                reject(Message='Payment Declined')      
+            }
+          
+          
+        })
+    })
+       
+    }
+       
+    
+       </script>

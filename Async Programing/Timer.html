@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="display">0</div>
+    <input type="number" id="hours" placeholder="hours">
+    <input type="number" id="mints" placeholder="mints">
+    <input type="number" id="seconds" placeholder="seconds">
+
+    <button onclick="start()" >Start</button>
+</body>
+
+<script>
+    let hours = document.getElementById('hours')
+    let minutes = document.getElementById('mints')
+    let seconds = document.getElementById('seconds')
+    let display = document.getElementById('display')
+    let Hours = 0;
+    let Minutes = 0;
+    let Seconds = 0; 
+    let timer = null
+    display.innerText = seconds
+   // functions
+
+
+   function start(){
+   timer.innerText = seconds.value 
+   timer = setInterval(updatetimer,1000)
+   }
+
+   function updatetimer(){
+   seconds--;
+   
+
+   
+}
+
+</script>
+</html>
