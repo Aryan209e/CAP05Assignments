@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        /* Add your CSS styling here */
+        /* Add this CSS to style the forecast section and items */
+.forecast {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.forecast h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.forecast-item img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter City">
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="weather">
+            <h2>Weather Details</h2>
+            <div id="weatherDetails">
+                <!-- Weather details will be displayed here -->
+            </div>
+        </div>
+        <div class="map">
+            <h2>City Map</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+
+  
+<div class="forecast">
+    <h2>Daily Forecast</h2>
+    <div id="dailyForecast">
+        <!-- Daily forecast data will be displayed here -->
+    </div>
+</div>
+
+
+    
+     
+</body>
+</html>
+<script src="Assignment3.js"> 
+</script>
