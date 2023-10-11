@@ -1,0 +1,116 @@
+Q1
+What is React ?
+React is a JavaScript library developed by Facebook which, among other things, was used to build Instagram.com. It aims to allow developers to create fast user interfaces for websites and applications alike easily. The main concept of React. js is virtual DOM.
+
+Q2
+Who made React ?
+React was created by Jordan Walke, a software engineer at Facebook.
+
+Q3
+What is Babel ? 
+Babel in react operates as a transpiler, converting the latest JavaScript syntax into a version that can run in all environments. This is done by converting the latest JavaScript syntax into an older version that is supported by all browsers.
+
+Q4
+How does Babel convert html code in React into valid code ?
+Babel converts HTML code into valid code by using the JSX code and converter. A user can essentially use future JavaScript in the browsers of today thanks to Babel, a very well-known transpiler.
+
+Q5
+ReactDOM is used to render components and elements on the web. It is a part of the React library used to create user interfaces and dynamic web applications, as well as reusable and composable components that can be used in different applications.
+Example =>
+      import React from 'react';
+import ReactDOM from 'react-dom';
+
+   Create a simple React component
+function MyComponent() {
+  return <h1>Hello, ReactDOM!</h1>;
+}
+
+   Use ReactDOM to render the component into the root element of the HTML document
+   ReactDOM.render(<MyComponent />, document.getElementById('root'));
+
+Q6
+What are the packages that you need to import for react to work with ?
+To work with React, you'll need to import several packages, including React itself and other related dependencies. Here's a list of some of the essential packages you commonly need:
+
+1. `react`: The core React library for building user interfaces.
+
+javascript
+import React from 'react';
+
+
+2. `react-dom`: The package that allows you to interact with the DOM and render React components.
+
+javascript
+import ReactDOM from 'react-dom';
+
+
+3. `prop-types` (optional): A package for defining and validating the types of props passed to React components.
+
+javascript
+import PropTypes from 'prop-types';
+
+
+4. `react-router-dom` (if you need routing): A package for adding client-side routing to your React application.
+
+javascript
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+
+5. `axios` (if you need HTTP requests): A popular package for making HTTP requests in React applications.
+
+javascript
+import axios from 'axios';
+
+
+6. `redux` (if you need state management): A package for managing global state in your React application.
+
+javascript
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+
+7. `react-redux` (if you're using Redux with React): Provides bindings to integrate Redux with React components.
+
+javascript
+import { connect } from 'react-redux';
+
+
+8. `redux-thunk` or other middleware (if using Redux with async actions): Middleware for handling asynchronous actions in Redux.
+
+javascript
+import thunk from 'redux-thunk';
+
+
+9. Additional libraries and packages as needed for specific functionality, like `styled-components` for styled component styling, `axios` for HTTP requests, or `formik` for form handling.
+
+Make sure to install these packages using a package manager like npm or yarn. For example, you can install React and React DOM with npm as follows:
+
+bash
+npm install react react-dom.
+
+Q7
+How do you add react to a web application ?
+Set up a JavaScript environment that lets you use the JSX syntax, split your code into modules with the import / export syntax, and use packages (for example, React) from the npm package registry.
+Render your React components where you want to see them on the page.
+
+Q8 
+What is React.createElement ?
+React. createElement( type, [props], [... children] ) Create and return a new React element of the given type. The type argument can be either a tag name string (such as 'div' or 'span' ), a React component type (a class or a function), or a React fragment type.
+
+Q9
+What are the three properties that createElement accept ?
+createElement returns a React element object with a few properties:
+type : The type you have passed.
+props : The props you have passed except for ref and key . 
+ref : The ref you have passed. 
+key : The key you have passed, coerced to a string.
+
+Q10
+What is the meaning of render and root?
+Render : Render means renew only an appropriate part of information on user’s screen when the element properties (props) are replaced by new ones or a component state (as set of props) changes in application. Thanks to the render method, we avoid reloading the whole web page, save time, and increase productivity.
+
+Root : Root is a mainly Div id name in react, We can change but the default name is root.And the whole react code is Done or render in that root element.
+
+
+
+
